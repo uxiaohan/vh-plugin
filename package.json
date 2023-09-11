@@ -1,0 +1,27 @@
+{
+	"name": "vh-plugin",
+	"version": "1.0.0",
+	"description": "轻量级JS插件包",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"Toast",
+		"Loading",
+		"URL参数",
+		"时间戳格式化",
+		"复制文本",
+		"设备类型",
+		"暂停执行"
+	],
+	"author": "Han",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.22.17",
+		"@babel/preset-env": "^7.22.15",
+		"rollup": "^1.32.1",
+		"rollup-plugin-babel": "^4.4.0",
+		"rollup-plugin-uglify": "^6.0.4"
+	}
+}
