@@ -15,8 +15,3 @@ export default {
         uglify()
     ]
 };
-
-// 打包命令
-// npx rollup -c
-// 发布命令
-// npm publish
