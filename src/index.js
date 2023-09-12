@@ -1,7 +1,5 @@
-// JS压缩地址
-// https://www.qianbo.com.cn/Tool/Beautify/Js-Compress.html
 const vh = (() => {
-    console.log('vh-plugin v1.0.0');
+    console.log('vh-plugin v1.0.1');
     return {
         toastSetTimeout: null,
         // Toast弹窗事件

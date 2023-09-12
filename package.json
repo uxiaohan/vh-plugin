@@ -1,6 +1,6 @@
 {
 	"name": "vh-plugin",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "轻量级JS插件包",
 	"main": "index.js",
 	"scripts": {

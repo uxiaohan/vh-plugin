@@ -4,7 +4,7 @@ import { uglify } from 'rollup-plugin-uglify';
 export default {
     input: 'src/index.js',
     output: {
-        file: 'lib/my-npm-package.min.js',
+        file: 'index.js',
         format: 'cjs',
         name: 'vh-plugin'
     },
