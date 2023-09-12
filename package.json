@@ -1,6 +1,6 @@
 {
 	"name": "vh-plugin",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "轻量级JS插件包",
 	"main": "index.js",
 	"scripts": {
@@ -16,7 +16,7 @@
 		"暂停执行"
 	],
 	"author": "Han",
-	"license": "ISC",
+	"license": "MIT",
 	"devDependencies": {
 		"@babel/preset-env": "^7.22.15",
 		"rollup": "^2.79.1",
