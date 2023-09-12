@@ -1,17 +1,13 @@
-import babel from 'rollup-plugin-babel';
-import { uglify } from 'rollup-plugin-uglify';
+import { terser } from 'rollup-plugin-terser';
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 
 export default {
-    input: 'src/index.js',
+    input: 'vh/index.js',
     output: {
-        file: 'index.js',
-        format: 'cjs',
-        name: 'vh-plugin'
+        file: 'dist/vh-plugin.min.js',
+        format: 'iife',
+        name: 'vh',
     },
-    plugins: [
-        babel({
-            exclude: 'node_modules/**'
-        }),
-        uglify()
-    ]
+    plugins: [resolve(), commonjs(), terser()]
 };

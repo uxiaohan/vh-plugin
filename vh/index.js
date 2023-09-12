@@ -1,5 +1,4 @@
 const vh = (() => {
-    console.log('vh-plugin v1.0.1');
     return {
         toastSetTimeout: null,
         // Toast弹窗事件
@@ -12,7 +11,7 @@ const vh = (() => {
                 }
             });
             if (!hasSty) {
-                const vhStyle = `.ξvh-toast{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif!important;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:fixed;top:50%;left:50%;display:none;padding:16px 22px;width:max-content;max-width:566px;border-radius:6.6px;font-size:14.6px;line-height:1.6;font-weight:normal;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.66);color:#fff;opacity:0;z-index:9999999;transition:all 366ms;word-wrap:break-word;overflow-wrap:break-word;overflow:hidden;}@media screen and (max-width:992px){body{.ξvh-toast{padding:4.44vw 6.11vw !important;max-width:56.66vw !important;border-radius:1.8vw !important;font-size:3.6vw !important;}}}`;
+                const vhStyle = `.ξvh-toast{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif!important;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:fixed;top:50%;left:50%;display:none;padding:8px 16px;width:max-content;max-width:566px;border-radius:6.6px;font-size:14.6px;line-height:1.6;font-weight:normal;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.66);color:#fff;opacity:0;z-index:9999999;transition:all 366ms;word-wrap:break-word;overflow-wrap:break-word;overflow:hidden;}@media screen and (max-width:992px){body{.ξvh-toast{padding:2vw 6vw !important;max-width:56.66vw !important;border-radius:1.8vw !important;font-size:3.6vw !important;}}}`;
                 const styE = document.createElement("style");
                 styE.textContent = vhStyle;
                 document.head.appendChild(styE);
@@ -118,3 +117,5 @@ const vh = (() => {
         wait: async (time = 1666) => new Promise((resolve) => setTimeout(resolve, time)),
     };
 })();
+
+window.vh = vh;
