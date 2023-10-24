@@ -2,9 +2,9 @@
 
 ## Browser Support
 
-![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_48x48.png) | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png) | ![IE](https://raw.githubusercontent.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) |
---- | --- | --- | --- | --- | --- |
-Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
+| ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_48x48.png) | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png) | ![IE](https://raw.githubusercontent.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) |
+| --- | --- | --- | --- | --- | --- |
+| Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
 
 ## Installing
 
@@ -112,10 +112,36 @@ vh.copyText(text, msg);
 
 ```js
 /**
+ * 正则校验
+ * @param {string} url - 需要校验的URL，必填项。
+ * @param {string} phone - 需要校验的手机号码，必填项。
+ * @param {string} email - 需要校验的邮箱地址，必填项。
+ * @param {string} idcard - 需要校验的身份证号码，必填项。
+ * @returns {Boolean} 返回一个布尔值，true或false
+ * 设备类型判断
+ * @returns {Object} 返回一个对象，包含了 `windows`、`mac`、`android` 和 `ios` 四个属性，分别表示当前设备类型
+ */
+vh.check.url(url);
+vh.check.phone(phone);
+vh.check.email(email);
+vh.check.idcard(idcard);
+vh.check.ua();
+```
+
+```js
+/**
  * 根据用户代理字符串判断当前设备类型
  * @returns {Object} 返回一个对象，包含了 `windows`、`mac`、`android` 和 `ios` 四个属性，分别表示当前设备类型
  */
 vh.checkUA();
+```
+
+```js
+/**
+ * 极简图片灯箱，初始化即可使用
+ * @param {Array} ImgArr - 图片集合（数组），必填项。
+ */
+vh.imgLightBoxInit(ImgArr);
 ```
 
 ```js
