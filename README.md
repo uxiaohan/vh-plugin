@@ -130,14 +130,6 @@ vh.check.ua();
 
 ```js
 /**
- * 根据用户代理字符串判断当前设备类型
- * @returns {Object} 返回一个对象，包含了 `windows`、`mac`、`android` 和 `ios` 四个属性，分别表示当前设备类型
- */
-vh.checkUA();
-```
-
-```js
-/**
  * 极简图片灯箱，初始化即可使用
  * @param {Array} ImgArr - 图片集合（数组），必填项。
  */
