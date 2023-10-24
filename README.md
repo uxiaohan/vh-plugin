@@ -56,9 +56,6 @@ vh.toast(text, duration);
  * @param {string} color - loading颜色，默认值为#567AD0，可以是任何有效的CSS颜色值。
  */
 vh.showLoading();
-```
-
-```js
 /**
  * 隐藏loading遮罩层
  */
@@ -118,13 +115,15 @@ vh.copyText(text, msg);
  * @param {string} email - 需要校验的邮箱地址，必填项。
  * @param {string} idcard - 需要校验的身份证号码，必填项。
  * @returns {Boolean} 返回一个布尔值，true或false
- * 设备类型判断
- * @returns {Object} 返回一个对象，包含了 `windows`、`mac`、`android` 和 `ios` 四个属性，分别表示当前设备类型
  */
 vh.check.url(url);
 vh.check.phone(phone);
 vh.check.email(email);
 vh.check.idcard(idcard);
+/**
+ * 设备类型判断
+ * @returns {Object} 返回一个对象，包含了 `windows`、`mac`、`android` 和 `ios` 四个属性，分别表示当前设备类型
+ */
 vh.check.ua();
 ```
 
