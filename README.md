@@ -162,19 +162,3 @@ vh.Check.idcard(idcard);
  */
 vh.Check.ua();
 ```
-
-```js
-/**
- * 极简图片灯箱，初始化即可使用
- * @param {Array} ImgArr - 图片集合（数组），必填项。
- */
-vh.imgLightBoxInit(ImgArr);
-```
-
-```js
-/**
- * 暂停一段时间后执行代码
- * @param {number} time - 暂停的时间（单位：毫秒），不必填项。默认为 1666。
- */
-vh.Wait(time);
-```
