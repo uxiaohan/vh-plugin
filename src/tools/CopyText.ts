@@ -4,10 +4,12 @@
  * @param {string} message - 复制成功后的提示信息，不必填项。默认为空字符串。
  * @returns {void}
  */
+import { Toast } from "../function/Toast";
+
 const CopyText = (text: string, message: string = "Copy Success"): void => {
   navigator.clipboard
     .writeText(text)
-    .then(() => message !== "" && console.log(message))
+    .then(() => message !== "" && Toast("Copy Success"))
     .catch((error) => console.log("Copy Error", error));
 };
 
