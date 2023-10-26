@@ -1,6 +1,6 @@
 {
   "name": "vh-plugin",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "轻量级JS插件包",
   "main": "dist/vh-plugin.min.js",
   "module": "dist/vh-plugin.esm.js",
@@ -13,7 +13,6 @@
     "时间戳格式化",
     "复制文本",
     "设备类型",
-    "暂停执行",
     "极简灯箱",
     "正则校验手机号",
     "节流",
