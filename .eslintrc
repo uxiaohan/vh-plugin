@@ -8,7 +8,7 @@
     "prettier/prettier": [
       "error",
       {
-        "printWidth": 220,
+        "printWidth": 288,
         "endOfLine": "auto"
       }
     ]

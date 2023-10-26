@@ -152,13 +152,13 @@ vh.Throttle(() => fn, delay);
  * @param {string} idcard - 需要校验的身份证号码，必填项。
  * @returns {Boolean} 返回一个布尔值，true或false
  */
-vh.Check.url(url);
-vh.Check.phone(phone);
-vh.Check.email(email);
-vh.Check.idcard(idcard);
+vh.check.url(url);
+vh.check.phone(phone);
+vh.check.email(email);
+vh.check.idcard(idcard);
 /**
  * 设备类型判断
  * @returns {Object} 返回一个对象，包含了 `windows`、`mac`、`android` 和 `ios` 四个属性，分别表示当前设备类型
  */
-vh.Check.ua();
+vh.check.ua();
 ```
