@@ -1,0 +1,17 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 220,
+        "endOfLine": "auto"
+      }
+    ]
+  },
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"]
+}
