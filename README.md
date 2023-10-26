@@ -109,6 +109,24 @@ vh.copyText(text, msg);
 
 ```js
 /**
+ * 防抖
+ * @param {function} fn - 需要执行的函数。
+ * @param {number} wait - 间隔时间，默认1000ms。
+ */
+vh.debounce(() => fn, wait);
+```
+
+```js
+/**
+ * 节流
+ * @param {function} fn - 需要执行的函数。
+ * @param {number} delay - 间隔时间，默认1000ms。
+ */
+vh.throttle(() => fn, delay);
+```
+
+```js
+/**
  * 正则校验
  * @param {string} url - 需要校验的URL，必填项。
  * @param {string} phone - 需要校验的手机号码，必填项。

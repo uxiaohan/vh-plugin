@@ -674,6 +674,31 @@ const vh = (() => {
           play: Xa
         };
       }).call(window);
+    },
+    // 防抖
+    debounce: (fn, wait = 1000) => {
+      let timer = null;
+      return function (...args) {
+        const ctx = this;
+        if (timer) {
+          clearTimeout(timer);
+          timer = null;
+        }
+        timer = setTimeout(() => {
+          fn.apply(ctx, args);
+        }, wait);
+      };
+    },
+    // 节流
+    throttle: (fn, delay = 1000) => {
+      let prevTime = 0;
+      return function (...args) {
+        const nowTime = Date.now();
+        if (nowTime - prevTime > delay) {
+          prevTime = nowTime;
+          fn.apply(this, args);
+        }
+      };
     }
   };
 })();
