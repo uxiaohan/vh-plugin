@@ -1,11 +1,25 @@
-import { showLoading, hideLoading } from "./function/Loading";
-import { Toast } from "./function/Toast";
-import { check } from "./tools/Check";
-import { CopyText } from "./tools/CopyText";
-import { Debounce } from "./tools/Debounce";
-import { getUrlParams } from "./tools/GetUrlParams";
-import { getUrlParamsJson } from "./tools/GetUrlParamsJson";
-import { jsonToUrlParams } from "./tools/JsonToUrlParams";
-import { Throttle } from "./tools/Throttle";
-import { TimeFormat } from "./tools/TimeFormat";
-export { showLoading, hideLoading, Toast, CopyText, Debounce, Throttle, getUrlParams, getUrlParamsJson, jsonToUrlParams, TimeFormat, check };
+declare const _default: {
+    showLoading: (opacity: number, color: string) => void;
+    hideLoading: () => void;
+    Toast: (text: string, duration?: number) => void;
+    CopyText: (text: string, message?: string) => void;
+    Debounce: <T extends (...args: any[]) => void>(fn: T, wait?: number) => (this: T, ...args: Parameters<T>) => void;
+    Throttle: <T_1 extends (...args: any[]) => void>(fn: T_1, delay?: number) => (this: any, ...args: Parameters<T_1>) => void;
+    getUrlParams: (param: string) => string | null;
+    getUrlParamsJson: () => Record<string, string>;
+    jsonToUrlParams: (json: Record<string, any>) => string;
+    TimeFormat: (time: string | number, format?: string) => string;
+    check: {
+        phone: (phone: string) => boolean;
+        email: (email: string) => boolean;
+        idcard: (idcard: string) => boolean;
+        url: (url: string) => boolean;
+        ua: () => {
+            windows: boolean;
+            mac: boolean;
+            android: boolean;
+            ios: boolean;
+        };
+    };
+};
+export default _default;

@@ -12,4 +12,4 @@ import { Throttle } from "./tools/Throttle";
 import { TimeFormat } from "./tools/TimeFormat";
 
 // 导出
-export { showLoading, hideLoading, Toast, CopyText, Debounce, Throttle, getUrlParams, getUrlParamsJson, jsonToUrlParams, TimeFormat, check };
+export default { showLoading, hideLoading, Toast, CopyText, Debounce, Throttle, getUrlParams, getUrlParamsJson, jsonToUrlParams, TimeFormat, check };
