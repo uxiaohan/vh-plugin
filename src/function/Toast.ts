@@ -4,45 +4,34 @@
  * @param {number} duration - 弹窗持续时间，单位为毫秒。不必填项，默认值为1666。
  * @returns {void}
  */
-let toastSetTimeout: any = null;
-const Toast = (text: string, duration: number = 1666): void => {
-  const hasSty = Array.from(document.styleSheets).some((sty) => {
-    try {
-      return Array.from(sty.cssRules).some((rule: any) => rule.selectorText && rule.selectorText.includes(".ξvh-toast"));
-    } catch (e) {
-      return false;
-    }
-  });
-  if (!hasSty) {
-    const vhStyle = `.ξvh-toast{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif!important;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:fixed;top:50%;left:50%;display:none;padding:8px 16px;width:max-content;max-width:566px;border-radius:6.6px;font-size:14.6px;line-height:1.6;font-weight:normal;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.66);color:#fff;opacity:0;z-index:9999999;transition:all 366ms;word-wrap:break-word;overflow-wrap:break-word;overflow:hidden;}@media screen and (max-width:992px){body{.ξvh-toast{padding:2vw 6vw !important;max-width:56.66vw !important;border-radius:1.8vw !important;font-size:3.6vw !important;}}}`;
-    const styE = document.createElement("style");
-    styE.textContent = vhStyle;
-    document.head.appendChild(styE);
+
+let vhMessageSettimeout: any = null;
+const Toast = (text: string): void => {
+  // 形
+  // eslint-disable-next-line prettier/prettier
+  const vhMessageStyle = 'body > .ξvh-message {pointer-events: none;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);box-sizing: border-box;padding: 12.88px 14.88px;display: flex;align-items: center;height: max-content;width: max-content;max-width: 318px;color: #fff;border-radius: 8.88px;background-color: rgba(0, 0, 0, 0.6);font-size: 14px;line-height: 18px;opacity: 0;z-index: -1;transition: all 0.18s;font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Segoe UI, Arial, Roboto, "PingFang SC", "miui", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;}body > .ξvh-message.active {pointer-events: auto;opacity: 1;z-index: 566;}';
+  const styleTagsWithvhMessage = Array.from(document.querySelectorAll("style")).filter((i: any) => i.textContent.includes("ξvh-message"));
+  // 无形则有形
+  if (styleTagsWithvhMessage.length < 1) {
+    const styleTag = document.querySelector("style") || document.createElement("style");
+    styleTag.appendChild(document.createTextNode(vhMessageStyle));
+    document.head.appendChild(styleTag);
   }
-  let vhDiv: HTMLDivElement | null = document.querySelector("body>.ξvh-toast");
-  if (!vhDiv) {
-    vhDiv = document.createElement("div");
-    vhDiv.classList.add("ξvh-toast");
-    document.body.appendChild(vhDiv);
+  // 无则有
+  let vhMsgDom: any = document.querySelector(".ξvh-message");
+  if (!vhMsgDom) {
+    vhMsgDom = document.createElement("section");
+    vhMsgDom.classList.add("ξvh-message");
+    document.body.appendChild(vhMsgDom);
   }
-  // 初始化隐藏
-  vhDiv.style.opacity = "0";
-  vhDiv.style.display = "none";
-  // 继续执行
-  vhDiv.innerText = text;
-  vhDiv.style.display = "block";
+  // 有则无
+  clearTimeout(vhMessageSettimeout);
+  // 存在即替换 终有无
+  vhMsgDom.innerHTML = text;
   setTimeout(() => {
-    vhDiv!.style.opacity = "1";
-  }, 1);
-  if (toastSetTimeout) {
-    clearTimeout(toastSetTimeout);
-  }
-  toastSetTimeout = setTimeout(() => {
-    vhDiv!.style.opacity = "0";
-    setTimeout(() => {
-      vhDiv!.style.display = "none";
-    }, 366);
-  }, duration);
+    vhMsgDom.classList.add("active");
+    vhMessageSettimeout = setTimeout(() => vhMsgDom.classList.remove("active"), 2666);
+  }, 6);
 };
 
 export { Toast };

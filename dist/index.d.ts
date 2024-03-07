@@ -1,7 +1,7 @@
 declare const _default: {
-    showLoading: (opacity: number, color: string) => void;
+    showLoading: (color?: string, opacity?: number) => void;
     hideLoading: () => void;
-    Toast: (text: string, duration?: number) => void;
+    Toast: (text: string) => void;
     CopyText: (text: string, message?: string) => void;
     Debounce: <T extends (...args: any[]) => void>(fn: T, wait?: number) => (this: T, ...args: Parameters<T>) => void;
     Throttle: <T_1 extends (...args: any[]) => void>(fn: T_1, delay?: number) => (this: any, ...args: Parameters<T_1>) => void;

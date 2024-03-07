@@ -1,4 +1,5 @@
 {
-  "printWidth": 288,
+  "semi": true,
+  "printWidth": 888,
   "endOfLine": "auto"
 }

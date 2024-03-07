@@ -6,11 +6,21 @@
  */
 import { Toast } from "../function/Toast";
 
-const CopyText = (text: string, message: string = "Copy Success"): void => {
-  navigator.clipboard
-    .writeText(text)
-    .then(() => message !== "" && Toast("Copy Success"))
-    .catch((error) => console.log("Copy Error", error));
+const CopyText = async (text: string, message: string = "Copy Success"): Promise<any> => {
+  let vhCopyStatus: any = false;
+  try {
+    await navigator.clipboard.writeText(text);
+    vhCopyStatus = true;
+  } catch (error) {
+    const i = document.createElement("textarea");
+    i.value = text;
+    document.body.appendChild(i);
+    i.select();
+    vhCopyStatus = document.execCommand("copy");
+    document.body.removeChild(i);
+  }
+  vhCopyStatus && message && Toast("Copy Success");
+  return vhCopyStatus ? true : false;
 };
 
 export { CopyText };
