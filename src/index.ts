@@ -10,6 +10,7 @@ import { getUrlParamsJson } from "./tools/GetUrlParamsJson";
 import { jsonToUrlParams } from "./tools/JsonToUrlParams";
 import { Throttle } from "./tools/Throttle";
 import { TimeFormat } from "./tools/TimeFormat";
+import { OneKey } from "./tools/OneKey";
 
 // 导出
-export default { showLoading, hideLoading, Toast, CopyText, Debounce, Throttle, getUrlParams, getUrlParamsJson, jsonToUrlParams, TimeFormat, check };
+export default { showLoading, hideLoading, Toast, CopyText, Debounce, Throttle, getUrlParams, getUrlParamsJson, jsonToUrlParams, TimeFormat, OneKey, check };
