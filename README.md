@@ -145,6 +145,13 @@ vh.Throttle(() => fn, delay);
 
 ```js
 /**
+ * 用户唯一标识
+ */
+vh.OneKey();
+```
+
+```js
+/**
  * 正则校验
  * @param {string} url - 需要校验的URL，必填项。
  * @param {string} phone - 需要校验的手机号码，必填项。
