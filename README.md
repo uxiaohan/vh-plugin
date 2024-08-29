@@ -146,8 +146,10 @@ vh.Throttle(() => fn, delay);
 ```js
 /**
  * 用户唯一标识
+ * @param {string} vkey - 自定义加盐值，非必填项。
+ * @returns {string} 返回一个用户唯一标识字符串。
  */
-vh.OneKey();
+vh.OneKey(vkey);
 ```
 
 ```js
