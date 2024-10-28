@@ -11,7 +11,7 @@ const _loadingInit = (status: boolean, opacity: number = 0.6, color: string = "#
   // 无形则有形
   if (styleTagsWithvhLoading.length < 1) {
     // eslint-disable-next-line prettier/prettier
-    const vhLoadingStyle = `body>.ξvh-loading{pointer-events:none;opacity:0;position:fixed;left:0;top:0;display:flex;align-items:center;justify-content:center;width:100vw;height:100vh;z-index:566}body>.ξvh-loading.ξvh-loading-active{pointer-events:auto;opacity:1}body>.ξvh-loading>.ξvh-loading-load{position:relative;border-radius:50%;width:28px;height:28px;border:3.6px solid #fff;animation:vh-loading-spin 1000ms linear infinite}@keyframes vh-loading-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}`;
+    const vhLoadingStyle = `body>.ξvh-loading{pointer-events:none;opacity:0;position:fixed;left:0;top:0;display:flex;align-items:center;justify-content:center;width:100vw;height:100vh;z-index:6666666666666666}body>.ξvh-loading.ξvh-loading-active{pointer-events:auto;opacity:1}body>.ξvh-loading>.ξvh-loading-load{position:relative;border-radius:50%;width:28px;height:28px;border:3.6px solid #fff;animation:vh-loading-spin 1000ms linear infinite}@keyframes vh-loading-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}`;
     const styleTag = document.querySelector("style") || document.createElement("style");
     styleTag.appendChild(document.createTextNode(vhLoadingStyle));
     document.head.appendChild(styleTag);

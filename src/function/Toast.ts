@@ -9,7 +9,7 @@ let vhMessageSettimeout: any = null;
 const Toast = (text: string): void => {
   // 形
   // eslint-disable-next-line prettier/prettier
-  const vhMessageStyle = 'body > .ξvh-message {pointer-events: none;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);box-sizing: border-box;padding: 12.88px 14.88px;display: flex;align-items: center;height: max-content;width: max-content;max-width: 318px;color: #fff;border-radius: 8.88px;background-color: rgba(0, 0, 0, 0.6);font-size: 14px;line-height: 18px;opacity: 0;z-index: -1;transition: all 0.18s;font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Segoe UI, Arial, Roboto, "PingFang SC", "miui", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;}body > .ξvh-message.active {pointer-events: auto;opacity: 1;z-index: 566;}';
+  const vhMessageStyle = 'body > .ξvh-message {pointer-events: none;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);box-sizing: border-box;padding: 12.88px 14.88px;display: flex;align-items: center;height: max-content;width: max-content;max-width: 318px;color: #fff;border-radius: 8.88px;background-color: rgba(0, 0, 0, 0.6);font-size: 14px;line-height: 18px;opacity: 0;z-index: -1;transition: all 0.18s;font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Segoe UI, Arial, Roboto, "PingFang SC", "miui", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;}body > .ξvh-message.active {pointer-events: auto;opacity: 1;z-index: 6666666666666668;}';
   const styleTagsWithvhMessage = Array.from(document.querySelectorAll("style")).filter((i: any) => i.textContent.includes("ξvh-message"));
   // 无形则有形
   if (styleTagsWithvhMessage.length < 1) {
