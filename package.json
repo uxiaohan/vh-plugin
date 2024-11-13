@@ -2,6 +2,12 @@
   "name": "vh-plugin",
   "version": "1.2.0",
   "description": "轻量级JS插件包",
+  "homepage": "https://www.vvhan.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uxiaohan/vh-plugin"
+  },
+  "license": "MIT",
   "main": "dist/vh-plugin.min.js",
   "module": "dist/vh-plugin.esm.js",
   "types": "dist/index.d.ts",
