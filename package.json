@@ -34,20 +34,20 @@
     "publish": "npm run lint && npm run build"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.0",
-    "@babel/preset-env": "^7.22.20",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
     "@rollup/plugin-babel": "^6.0.4",
-    "@typescript-eslint/eslint-plugin": "^6.7.5",
-    "@typescript-eslint/parser": "^6.7.5",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.51.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "prettier": "^3.0.3",
-    "rollup": "^4.0.2",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "rollup": "^4.25.0",
     "rollup-plugin-typescript2": "^0.36.0",
-    "tslib": "^2.6.2",
-    "typescript": "^5.2.2"
+    "tslib": "^2.8.1",
+    "typescript": "^5.6.3"
   },
   "dependencies": {
     "@rollup/plugin-terser": "^0.4.4"

@@ -4,12 +4,12 @@ declare const _default: {
     Toast: (text: string) => void;
     CopyText: (text: string, message?: string) => Promise<any>;
     Debounce: <T extends (...args: any[]) => void>(fn: T, wait?: number) => (this: T, ...args: Parameters<T>) => void;
-    Throttle: <T_1 extends (...args: any[]) => void>(fn: T_1, delay?: number) => (this: any, ...args: Parameters<T_1>) => void;
+    Throttle: <T extends (...args: any[]) => void>(fn: T, delay?: number) => (this: any, ...args: Parameters<T>) => void;
     getUrlParams: (param: string) => string | null;
     getUrlParamsJson: () => Record<string, string>;
     jsonToUrlParams: (json: Record<string, any>) => string;
-    TimeFormat: (time: string | number, format?: string) => string;
-    OneKey: () => string;
+    TimeFormat: (time: number | string, format?: string) => string;
+    OneKey: (safe?: boolean) => string;
     check: {
         phone: (phone: string) => boolean;
         email: (email: string) => boolean;
