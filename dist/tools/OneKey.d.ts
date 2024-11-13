@@ -1,2 +1,2 @@
-declare const OneKey: (_vkey?: string) => string;
+declare const OneKey: (safe?: boolean) => string;
 export { OneKey };

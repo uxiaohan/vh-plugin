@@ -46,7 +46,7 @@ const _loadingInit = (status: boolean, opacity: number = 0.6, color: string = "#
  * @param {string} color - loading颜色，默认值为#000000，可以是任何有效的CSS颜色值。
  * @return {void}
  */
-const showLoading = (color: string = "#000000", opacity: number = 0.6): void => {
+const showLoading = (color?: string, opacity?: number): void => {
   _loadingInit(true, opacity, color);
 };
 

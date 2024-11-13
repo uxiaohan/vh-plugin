@@ -62,7 +62,7 @@ import vh from "vh-plugin";
 /**
  * 显示Toast消息提示框
  * @param {string} text - 提示框内容，必填项。
- * @param {number} duration - 提示框存在时长，默认值为1666毫秒。
+ * @param {number} duration - 提示框存在时长，默认值为1666毫秒，非必填项。
  */
 vh.Toast(text, duration);
 ```
@@ -70,10 +70,10 @@ vh.Toast(text, duration);
 ```js
 /**
  * 显示loading遮罩层
- * @param {number} opacity - 遮罩层透明度，默认值为0.6，取值范围为0到1之间的小数。
- * @param {string} color - loading颜色，默认值为#567AD0，可以是任何有效的CSS颜色值。
+ * @param {number} opacity - 遮罩层透明度，默认值为0.6，取值范围为0到1之间的小数，非必填项。
+ * @param {string} color - loading颜色，默认值为#000000，可以是任何有效的CSS颜色值，非必填项。
  */
-vh.showLoading();
+vh.showLoading(color, opacity);
 /**
  * 隐藏loading遮罩层
  */
@@ -120,7 +120,7 @@ vh.TimeFormat(time, format);
 /**
  * 复制文本到剪贴板
  * @param {string} text - 需要复制的文本，必填项。
- * @param {string} msg - 复制成功后的提示消息，不必填项。默认为 "Copy Success"。传入任意非或空字符串时，不弹出消息提示。
+ * @param {string} msg - 复制成功后的提示消息，默认为 "Copy Success"。传入false不弹出消息提示，非必填项。
  */
 vh.CopyText(text, msg);
 ```
@@ -146,10 +146,10 @@ vh.Throttle(() => fn, delay);
 ```js
 /**
  * 用户唯一标识
- * @param {string} vkey - 自定义加盐值，非必填项。
+ * @param {boolean} safe - 是否开启严格模式，非必填项。
  * @returns {string} 返回一个用户唯一标识字符串。
  */
-vh.OneKey(vkey);
+vh.OneKey(safe);
 ```
 
 ```js
