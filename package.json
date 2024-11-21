@@ -32,7 +32,7 @@
     "lint": "eslint . --ext .js,.ts --fix",
     "serve": "cross-env NODE_ENV=development rollup -c -w",
     "build": "cross-env NODE_ENV=production rollup -c",
-    "publish": "npm run lint && npm run build"
+    "push": "npm run lint && npm run build && npm publish"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
