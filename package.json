@@ -1,6 +1,6 @@
 {
   "name": "vh-plugin",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "轻量级JS插件包",
   "homepage": "https://www.vvhan.com",
   "repository": {
@@ -25,7 +25,8 @@
     "正则校验邮箱",
     "用户唯一标识",
     "正则校验身份证号",
-    "判断设备类型Android,IOS,Windows,Mac"
+    "判断设备类型Android,IOS,Windows,Mac",
+    "下载文件"
   ],
   "scripts": {
     "lint": "eslint . --ext .js,.ts --fix",

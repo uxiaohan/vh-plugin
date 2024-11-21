@@ -127,6 +127,17 @@ vh.CopyText(text, msg);
 
 ```js
 /**
+ * 无风险打开URL/下载文件
+ * @param {string} url - 需要打开的URL，必填项。
+ * @param {string} filename - 如果是下载文件，需要指定文件名。为空则不下载，非必填项。
+ * @param {string} target - 打开方式，默认为 "_blank"，非必填项。
+ * @returns {void}
+ */
+vh.OpenURL(url, filename, target);
+```
+
+```js
+/**
  * 防抖
  * @param {function} fn - 需要执行的函数。
  * @param {number} wait - 间隔时间，默认1000ms。
