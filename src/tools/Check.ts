@@ -11,7 +11,7 @@ const check = {
     const isMobile = /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|OperaMini/i.test(userAgent);
     const isIos = /iPhone|iPad|iPod/i.test(userAgent);
     const isMac = /\b(Macintosh|Mac)\b/.test(userAgent);
-    const isiPad = Boolean((navigator.userAgent.match(/(iPad)/) || (navigator.userAgent.match(/(Macintosh)/) && navigator.maxTouchPoints >= 1)));
+    const isiPad = Boolean(navigator.userAgent.match(/(iPad)/) || (navigator.userAgent.match(/(Macintosh)/) && navigator.maxTouchPoints >= 1));
     return { windows: !isMobile && !isMac, mac: isMac && !isiPad, android: isMobile && !isIos, ios: isIos || isiPad };
   },
 };
