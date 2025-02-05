@@ -7,11 +7,12 @@ const check = {
   idcard: (idcard: string): boolean => /^[1-9]\d{5}(?:18|19|20)\d{2}(?:0[1-9]|10|11|12)(?:0[1-9]|[1-2]\d|30|31)\d{3}[\dXx]$/.test(idcard),
   url: (url: string): boolean => /^((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+/.test(url),
   ua: (): { windows: boolean; mac: boolean; android: boolean; ios: boolean } => {
-    const userAgent = navigator.userAgent.toLowerCase();
+    const userAgent = navigator.userAgent;
     const isMobile = /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|OperaMini/i.test(userAgent);
     const isIos = /iPhone|iPad|iPod/i.test(userAgent);
     const isMac = /\b(Macintosh|Mac)\b/.test(userAgent);
-    return { windows: !isMobile && !isMac, mac: isMac, android: isMobile && !isIos, ios: isIos };
+    const isiPad = Boolean((navigator.userAgent.match(/(iPad)/) || (navigator.userAgent.match(/(Macintosh)/) && navigator.maxTouchPoints >= 1)));
+    return { windows: !isMobile && !isMac, mac: isMac && !isiPad, android: isMobile && !isIos, ios: isIos || isiPad };
   },
 };
 
